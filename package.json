@@ -1,0 +1,7 @@
+{
+  "name": "campus-lost-found-portal",
+  "version": "1.0.0",
+  "description": "A simple campus lost and found web application",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" }
+}

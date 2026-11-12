@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Lost & Found Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="brand">🎒 Campus<span>Connect</span></div>
+    <p>Lost something? Found something? Bring it back to its owner.</p>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div><p class="eyebrow">CAMPUS COMMUNITY</p><h1>Lost it. Found it.<br><span>Connect again.</span></h1>
+      <p class="sub">A simple place to report and discover items around your campus.</p></div>
+      <div class="hero-icon">🔎</div>
+    </section>
+
+    <section class="stats">
+      <div class="stat"><b id="total">0</b><small>Total reports</small></div>
+      <div class="stat"><b id="open">0</b><small>Still looking</small></div>
+      <div class="stat"><b id="returned">0</b><small>Returned</small></div>
+    </section>
+
+    <section class="content">
+      <div class="panel form-panel">
+        <h2>Post an item</h2><p class="muted">Share the details so others can help.</p>
+        <form id="itemForm">
+          <label>Item name</label><input id="title" placeholder="e.g. Black water bottle" required>
+          <label>Report type</label><select id="type"><option>Lost</option><option>Found</option></select>
+          <label>Description</label><textarea id="description" placeholder="Colour, brand or other details" required></textarea>
+          <label>Last seen / found at</label><input id="location" placeholder="e.g. Library, Block A" required>
+          <label>Contact details</label><input id="contact" placeholder="Email or phone (optional)">
+          <button type="submit">＋ Submit report</button>
+          <p id="message" class="message"></p>
+        </form>
+      </div>
+
+      <div class="panel listings">
+        <div class="list-head"><div><h2>Recent reports</h2><p class="muted">Browse items reported by students.</p></div>
+          <input id="search" class="search" placeholder="Search items..."></div>
+        <div class="filters"><button class="filter active" data-filter="All">All items</button><button class="filter" data-filter="Lost">Lost</button><button class="filter" data-filter="Found">Found</button></div>
+        <div id="items" class="items"></div>
+      </div>
+    </section>
+    <footer>Made for a safer, more helpful campus community.</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

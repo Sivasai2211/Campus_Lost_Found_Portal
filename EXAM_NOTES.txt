@@ -1,0 +1,55 @@
+CAMPUS LOST & FOUND PORTAL - EXTERNAL LAB QUICK NOTES
+
+AIM
+To design and develop a Campus Lost & Found Portal using HTML, CSS, JavaScript and Node.js.
+
+PROCEDURE
+1. Create a project folder and open it in VS Code.
+2. Create frontend files (index.html, style.css, app.js).
+3. Create server.js for backend operations.
+4. Run the backend using: node server.js
+5. Open http://localhost:3000 in a browser.
+6. Add a Lost/Found item, search/filter items and mark an item as Returned.
+7. Push the project to GitHub using Git commands.
+
+GIT COMMANDS (first time)
+git init
+git add .
+git commit -m "Campus Lost and Found Portal"
+git branch -M main
+git remote add origin YOUR_GITHUB_REPOSITORY_URL
+git push -u origin main
+
+GIT COMMANDS (if repository is already connected)
+git add .
+git commit -m "Update project"
+git push
+
+RUN COMMAND
+node server.js
+
+EXPECTED OUTPUT
+A Campus Lost & Found Portal webpage appears. The user can submit an item name, type, description, location and contact. Reports appear in Recent Reports. Search and filters work, and an open report can be marked as Returned.
+
+ORIGINAL OUTPUT
+Write what you actually see in the browser during the lab exam. Example:
+"Portal running at http://localhost:3000" in terminal and the Campus Lost & Found Portal page in browser with the submitted item displayed.
+
+EASY CODE TO REMEMBER
+Frontend main flow:
+1. fetch('/api/items') to get items
+2. showItems() to display items
+3. fetch('/api/items', {method:'POST'}) to add item
+4. fetch('/api/items/' + id, {method:'PATCH'}) to mark returned
+
+Backend main flow:
+1. GET /api/items -> send all items
+2. POST /api/items -> read form data and save item
+3. PATCH /api/items/:id -> update status
+4. server.listen(3000) -> start server
+
+IMPORTANT
+- Remember the frontend file is public/app.js.
+- Backend file is server.js.
+- No npm install is needed; Node.js must be installed.
+- Do not write "original output" as if you ran it if you did not. In the exam, record the actual output shown.
